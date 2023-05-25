@@ -1,0 +1,32 @@
+{
+    "name": "MOOC_node_mod4-sockets_entrega",
+    "author": "ging-moocs",
+    "license": "GNU",
+    "version": "0.0.0",
+    "info": {
+        "githubURL": "ging-moocs/MOOC_node_mod4-sockets_entrega",
+        "serverUrl": "https://moocbot.dit.upm.es/",
+        "courseId": "1262",
+        "assignmentId": "548"
+    },
+    "assets": [
+        "./node_modules/sqlite3/lib/binding/**/*"
+    ],
+    "scripts": {
+        "migrate": "sequelize db:migrate --url sqlite://$(pwd)/db.sqlite",
+        "seed": "sequelize db:seed:all --url sqlite://$(pwd)/db.sqlite",
+        "migrate_win": "sequelize db:migrate --url sqlite://%cd%/db.sqlite",
+        "seed_win": "sequelize db:seed:all --url sqlite://%cd%/db.sqlite",
+        "start": "node main.js"
+    },
+    "engines": {
+        "node": ">=16.8.0",
+        "npm": ">=7.21.0"
+    },
+    "dependencies": {
+        "autocorector": "^3.1.3",
+        "sequelize": "^6.6.5",
+        "sequelize-cli": "^6.2.0",
+        "sqlite3": "^5.0.2"
+    }
+}
